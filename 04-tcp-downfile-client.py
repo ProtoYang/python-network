@@ -16,8 +16,9 @@ def main():
     tcp_socket.send(file_name.encode("gbk"))
     # 保存接收到的数据到一个文件中
     rece_data = tcp_socket.recv(1024)
-    with open("New" + file_name, "wb") as f:
-        f.write(rece_data)
+    if rece_data:
+        with open("New" + file_name, "wb") as f:
+            f.write(rece_data)
 
     # 关闭链接
     # tcp_socket.close()
