@@ -13,7 +13,7 @@ def send_file_2_client(new_client_socket, client_address):
         f.close()
 
     except Exception as ret:
-
+        print(ret)
         print("没有此文件(%s)" % file_name)
     new_client_socket.send(file_content)
 
