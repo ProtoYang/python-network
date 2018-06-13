@@ -35,7 +35,7 @@ def main():
         # 关闭套接字
         new_client_socket.close()
 
-    tcp_socket_server.close()
+    # tcp_socket_server.close()
 
 
 if __name__ == "__main__":
